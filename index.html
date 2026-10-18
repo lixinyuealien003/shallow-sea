@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>生命探索者 · 史前滨海沼泽</title>
+  <style>
+    :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;overflow:hidden;background:#1b2527;color:#f0e8d3;font-family:system-ui,-apple-system,"PingFang SC",sans-serif}canvas{display:block}button{font:inherit;cursor:pointer}#veil{position:fixed;inset:0;z-index:10;display:grid;place-items:center;background:linear-gradient(180deg,#172227e9,#17211ce7);transition:opacity .35s}#veil.hidden{opacity:0;pointer-events:none}.card{width:min(440px,calc(100vw - 36px));padding:30px 32px;background:#1d2728ee;border:1px solid #c7ad7655;box-shadow:0 28px 80px #0008;backdrop-filter:blur(12px)}.eyebrow{font-size:11px;letter-spacing:.3em;color:#c9ad72;margin:0 0 14px}.card h1{font-size:30px;font-weight:500;letter-spacing:.05em;margin:0 0 8px}.card p{font-size:14px;line-height:1.8;color:#d2d1c3;margin:0 0 22px}.progress{height:3px;background:#485453;margin:0 0 12px}.progress span{display:block;height:100%;width:0;background:#e8c887;transition:width .2s}#loadtext{font-size:12px;color:#aeb9b0;min-height:18px}#start{margin-top:18px;width:100%;padding:13px;border:1px solid #e1c386;background:#d7bb82;color:#1b2522;font-weight:600;letter-spacing:.16em}#start:disabled{opacity:.45;cursor:default}#hud{position:fixed;inset:0;pointer-events:none;display:none}#hud.visible{display:block}.brand{position:absolute;left:26px;top:22px;padding-left:12px;border-left:2px solid #dfc18c;text-shadow:0 2px 8px #000a}.brand strong{display:block;font-size:16px;letter-spacing:.12em;font-weight:500}.brand span{font-size:11px;letter-spacing:.17em;color:#e3d7b9}.help{position:absolute;left:26px;bottom:21px;max-width:520px;font-size:12px;line-height:1.7;color:#efe9d6;text-shadow:0 1px 5px #000}.right{position:absolute;right:22px;top:22px;display:flex;gap:8px;pointer-events:auto}.right button{padding:8px 12px;border:1px solid #e9e1c480;background:#1b2827a8;color:#eee4cc;font-size:12px}.cross{position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px;border-radius:50%;background:#fff9;box-shadow:0 0 3px #0008}.status{position:absolute;right:23px;bottom:20px;color:#eee8d2a8;font-size:11px;text-shadow:0 1px 5px #000}@media(max-width:640px){.help{max-width:220px}.status{display:none}.brand{left:16px;top:16px}.right{right:12px;top:16px}}
+  </style>
+</head>
+<body>
+<div id="veil"><div class="card"><div class="eyebrow">LIFE EXPLORER / 01</div><h1>史前滨海沼泽</h1><p>从湿泥岸边出发，沿连通的浅水水道探索古植物群落。暮光照亮泥滩、倒木与远山。</p><div class="progress"><span id="bar"></span></div><div id="loadtext">正在准备场景…</div><button id="start" disabled>点击开始探索</button></div></div>
+<div id="hud"><div class="brand"><strong>生命探索者</strong><span>史前浅海 · 滨海沼泽</span></div><div class="right"><button id="reset">重置位置</button><button id="helpbtn">操作提示</button></div><div class="cross"></div><div id="help" class="help">WASD 移动　·　鼠标环视　·　Shift 加速　·　Esc 释放鼠标<br>未锁定鼠标时，在画面内移动鼠标环视；点击画面可恢复视角控制。<br>浅水可涉过；深水、树干和大石会阻挡前进。</div><div id="status" class="status"></div></div>
+<script type="importmap">{"imports":{"three":"./vendor/build/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+<script type="module" src="./runtime.js?v=11"></script>
+</body></html>
